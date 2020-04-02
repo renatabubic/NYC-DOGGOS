@@ -1,0 +1,114 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  margin-left: 20px;
+  height: 20vmin;
+  pointer-events: none;
+}
+
+.App-intro {
+  display: flex;
+  justify-content: center;
+}
+
+.App-header {
+  background-color: lightblue;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-header > h1 {
+  margin-left: 200px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.pets {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.single-pets {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-end; */
+}
+
+li {
+  list-style-type: none;
+  flex-wrap: wrap;
+  display: inline-block;
+  max-width: 77%;
+  word-break: keep-all;
+}
+
+.single-pets img {
+  width: 250px;
+  height: 250px;
+  margin-left: 20px;
+}
+
+#search {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+form {
+  margin: 20px;
+}
+
+button {
+  margin-left: 20px;
+}
+select {
+  margin-left: 10px;
+}
+label {
+  margin-left: 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+div #forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+button {
+  background-color: lightblue;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 27px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+button:hover {
+  background-color: lightgray;
+  border: none;
+  color: brown;
+  font-weight: bold;
+  padding: 10px 27px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
