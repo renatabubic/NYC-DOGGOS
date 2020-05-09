@@ -8,10 +8,12 @@ Fork and clone this repo
 
 npm install
 
-Start the build process and open web server running the application with:
+Run:
 
 npm start
-under: /app/src && /api
+
+Under: 
+/NYC-DOGGOS && /NYC-DOGGOS/api
 
 ## Project Status
 
