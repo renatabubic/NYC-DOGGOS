@@ -10,9 +10,8 @@ npm install
 
 Start the build process and open web server running the application with:
 
-/app/src/ npm start
-&&
-/api npm start
+npm start
+under: /app/src && /api
 
 ## Project Status
 
