@@ -9,7 +9,7 @@ class App extends React.Component {
     this.state = {
       pets: [],
       selectedBreed: "all",
-      selectedSex: "female"
+      selectedSex: "female",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,16 +17,16 @@ class App extends React.Component {
 
   callAPI() {
     fetch("http://localhost:9000/testAPI")
-      .then(res => res.text())
-      .then(res => this.setState({ apiResponse: res }))
-      .catch(err => err);
+      .then((res) => res.text())
+      .then((res) => this.setState({ apiResponse: res }))
+      .catch((err) => err);
   }
 
   async componentDidMount() {
     const res = await axios.get("http://localhost:9000/api");
-    res.data.map(pet =>
+    res.data.map((pet) =>
       this.setState({
-        pets: [...this.state.pets, pet]
+        pets: [...this.state.pets, pet],
         // selectedPets: [...this.state.selectedPets, pet]
       })
     );
@@ -42,9 +42,9 @@ class App extends React.Component {
     const res = await axios.get(
       `http://localhost:9000/api/${this.state.selectedBreed}`
     );
-    res.data.map(pet =>
+    res.data.map((pet) =>
       this.setState({
-        pets: [...this.state.pets, pet]
+        pets: [...this.state.pets, pet],
       })
     );
     console.log(res.data);
@@ -96,22 +96,26 @@ class App extends React.Component {
             </form>
           </div>
         </div>
-        <div className="pets">
-          {this.state.pets.map(pet => {
-            return (
-              <div key={pet.link} className="single-pets">
-                <img src={pet.image} alt="dog-pic" />
-                <h3>Name: {pet.name}</h3>
-                <ul className="list">
-                  <li>Breed: {pet.breed}</li>
-                  <li>Sex: {pet.sex}</li>
-                  <li>Age: {pet.age}</li>
-                  <li>Color: {pet.color}</li>
-                  <a href={pet.link}>Adopt Me!</a>
-                </ul>
-              </div>
-            );
-          })}
+        <div className="spacer-container">
+          <div className="spacer"></div>
+          <div className="pets">
+            {this.state.pets.map((pet) => {
+              return (
+                <div key={pet.link} className="single-pets">
+                  <img src={pet.image} alt="dog-pic" />
+                  <h3>Name: {pet.name}</h3>
+                  <ul className="list">
+                    <li>Breed: {pet.breed}</li>
+                    <li>Sex: {pet.sex}</li>
+                    <li>Age: {pet.age}</li>
+                    <li>Color: {pet.color}</li>
+                    <a href={pet.link}>Adopt Me!</a>
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+          <div className="spacer"></div>
         </div>
       </div>
     );
