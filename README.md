@@ -12,7 +12,7 @@ Run:
 
 npm start
 
-Under: 
+Under the following files: 
 /NYC-DOGGOS && /NYC-DOGGOS/api
 
 ## Project Status
