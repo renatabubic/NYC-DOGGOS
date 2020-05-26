@@ -6,11 +6,14 @@ NYC Doggos is a a web-scrapper that crawls various NYC-based dog adoption center
 
 Fork and clone this repo
 
+```
 npm install
 
-Run:
-
+```
+&&
+```
 npm start
+```
 
 Under the following files: 
 /NYC-DOGGOS && /NYC-DOGGOS/api
